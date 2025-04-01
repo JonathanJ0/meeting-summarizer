@@ -1,69 +1,46 @@
-# Welcome to your Lovable project
+# AudioBrief
 
-## Project info
+**AudioBrief** is a web application designed to transform meetings and text into actionable insights. It allows users to summarize text, extract tasks and deadlines, and record meetings with real-time transcription, summarization, and task extraction. The front-end is built with React and TypeScript, while the back-end is powered by Flask, leveraging NLP tools like spaCy and Hugging Face transformers for text processing.
 
-**URL**: https://lovable.dev/projects/3698d92e-950c-41e1-a2f7-060bb9048aee
+## Features
 
-## How can I edit this code?
+- **Summarize Text**: Convert lengthy text into concise summaries using the `facebook/bart-large-cnn` model.
+- **Extract Tasks**: Identify actionable tasks and deadlines from text using spaCy.
+- **Record Meetings**: Transcribe audio in real-time, summarize the transcription, and extract tasks and deadlines using `speech_recognition`, spaCy, and Hugging Face transformers.
+- **State-Based Navigation**: Seamlessly switch between sections (Home, Summarize, Extract Tasks, Record Meeting) without URL-based routing.
+- **Responsive Design**: Built with a mobile-first approach using custom CSS.
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+### Front-End
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Adds static types to JavaScript for better code reliability.
+- **Vite**: Fast build tool and development server.
+- **Bun**: Package manager for installing dependencies.
+- **Lucide React**: Icon library for UI elements (e.g., `ArrowLeft`, `Mic`).
+- **Custom CSS**: For styling the application (e.g., `index.css`, `main.css`).
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3698d92e-950c-41e1-a2f7-060bb9048aee) and start prompting.
+### Back-End
+- **Flask**: Lightweight Python web framework for the API.
+- **spaCy**: NLP library for task and deadline extraction.
+- **Hugging Face Transformers**: For text summarization (`facebook/bart-large-cnn` model).
+- **speech_recognition**: Python library for real-time audio transcription.
+- **Flask-CORS**: To handle cross-origin requests between the front-end and back-end.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Prerequisites
 
-**Use your preferred IDE**
+Before setting up the project, ensure you have the following installed:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Node.js** (for Bun compatibility): [Download](https://nodejs.org/)
+- **Bun**: [Installation Guide](https://bun.sh/)
+- **Python 3.8+**: [Download](https://www.python.org/downloads/)
+- **pip**: Python package manager (comes with Python)
+- **Git**: For cloning the repository.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Setup Instructions
 
-Follow these steps:
+### 1. Clone the Repository
+```bash
+git clone https://github.com/<your-username>/audio-brief.git
+cd audio-brief
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3698d92e-950c-41e1-a2f7-060bb9048aee) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
