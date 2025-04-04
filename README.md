@@ -41,6 +41,6 @@ Before setting up the project, ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/audio-brief.git
+git clone https://github.com/JonathanJ0/meeting-summarizer.git
 cd audio-brief
 
